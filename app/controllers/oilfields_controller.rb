@@ -1,0 +1,2 @@
+class OilfieldsController < ApplicationController
+end
