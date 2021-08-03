@@ -6,12 +6,18 @@ class CompaniesController < ApplicationController
 
 
     def create 
-        @company = Company.create(comp_params)
-        redirect_to company_path(@company)
+        @company = Company.new(comp_params)
+        if @company.save
+            session[:company_id] = @company.id
+             redirect_to company_path(@company)
+        else
+            render :new
+        end
     end
 
     def show 
         @company = Company.find_by_id(params[:id])
+        redirect_to '/' if !@company
     end 
 
 

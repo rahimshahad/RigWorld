@@ -1,14 +1,14 @@
 <h1> SignUp Here!</h1>
 
-<%= form_for @company do |f|%>
+<%= form_for @company, url:'/signup' do |f|%>
     <%=f.label :name, "Username:"%>
     <%=f.text_field :name%><br>
 
     <br><%=f.label :email, "Email:"%>
-    <%=f.email_field :email%><br>
+    <%=f.email_field :email, required: true %><br>
 
     <br><%=f.label :password, "Password:"%>
-    <%=f.password_field :password%><br>
+    <%=f.password_field :password, required: true%><br>
 
     <br><%=f.submit%>
 
