@@ -16,6 +16,7 @@ class CompaniesController < ApplicationController
     end
 
     def show 
+        redirect_if_not_logged_in
         @company = Company.find_by_id(params[:id])
         redirect_to '/' if !@company
     end 
