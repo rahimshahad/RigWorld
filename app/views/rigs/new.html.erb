@@ -1,0 +1,18 @@
+<h1>Make Your Rig Here</h1>
+
+<%= form_for @rig do |f|%>
+
+    <%=f.label :name, "Name:"%>
+    <%=f.text_field :name%><br>
+
+    <br><%=f.label :max_depth, "Maximum Depth(ft):"%>
+    <%=f.text_field :max_depth%><br>
+
+    <br> <%=f.label :min_depth, "Minimum Depth(ft):"%>
+    <%=f.text_field :min_depth%><br>
+
+    <br><%=f.label :description, "Description:"%>
+    <%=f.text_area :description%>
+
+     <%=f.submit%>
+     <%end%>

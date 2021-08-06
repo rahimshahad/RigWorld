@@ -3,7 +3,6 @@ class CreateOilfields < ActiveRecord::Migration[6.1]
     create_table :oilfields do |t|
       t.string :name
       t.string :location
-      t.integer :category_id
       t.timestamps
     end
   end
