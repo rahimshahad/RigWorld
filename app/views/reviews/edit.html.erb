@@ -1,0 +1,11 @@
+  
+<h1>Edit Review Here!</h1>
+
+
+<%= form_for(@review) do |f|%>
+  <%= f.label :rig %>
+  <%= f.collection_select :rig_id, Rig.all, :id, :name %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>

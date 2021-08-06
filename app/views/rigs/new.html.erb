@@ -1,0 +1,26 @@
+<h1>Design Your Rig </h1>
+
+<%= form_for(@rig) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <br>
+    <%= f.label :min_depth %>
+    <%= f.number_field :min_depth %>
+    <br>
+    <br>
+    <%= f.label :max_depth %>
+    <%= f.number_field :max_depth %>
+    <br>
+    <br>
+    <%= f.label :location %>
+    <%= f.text_field :location%>
+    <br>
+    <br>
+    <%= f.label :classification %>
+    <%= f.text_field :classification%>
+    <br>
+    <br>
+    <%= f.submit "New Rig" %>
+   
+<% end %>

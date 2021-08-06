@@ -1,0 +1,7 @@
+<h2><%= @review.content%> - <%= @review.company.name%></h2>
+
+<% if @review.company == current_user %>
+  <%= link_to "Edit Review", edit_review_path(@review)%>
+<% end %>
+
+<h4>View Rig: <%= link_to @review.rig.name, rig_path(@review.rig_id) %></h4>

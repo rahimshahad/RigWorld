@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2021_08_06_164930) do
 
   create_table "rigs", force: :cascade do |t|
     t.string "name"
-    t.string "type"
     t.integer "max_depth"
     t.integer "min_depth"
     t.string "classification"

@@ -1,0 +1,11 @@
+<% if @rig %>
+<h1> Reviews for <%= @rig.name %> </h1>
+<% else %>
+<h1>List Of All Reviews</h1>
+<% end %>
+
+<ul>
+    <% @reviews.each do |r| %>
+    <li><%= r.company.name %> said "<%= r.content%>" about  <strong><%= link_to r.rig.name, rig_path(r.rig_id) %></strong> </li>
+    <% end %>
+</ul>
