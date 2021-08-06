@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :rigs
+  resources :reviews
 root "sessions#home"
 #signup
 get '/signup' => 'companies#new'
@@ -14,8 +16,6 @@ post '/login' => 'sessions#create'
 
 
   # resources :categories
-  resources :oilfields
-  resources :rigs
   resources :companies
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -1,2 +1,0 @@
-class OilfieldsController < ApplicationController
-end
