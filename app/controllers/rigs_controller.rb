@@ -30,7 +30,7 @@ before_action :redirect_if_not_logged_in
     def update 
         @rig = Rig.find_by_id(params[:id])
         redirect_to rigs_path if !@rig || @rig.company != current_user
-        if rig.update(rig_params)
+        if @rig.update(rig_params)
             redirect_to rig_path(@rig)
         else 
             render :edit 

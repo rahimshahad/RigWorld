@@ -1,6 +1,19 @@
-<%= @rig.name %>
+<h1>Rig Name: <%= @rig.name %></h1>
+<h2>By : <%= @rig.company.name %></h2>
 
+<div> Maximum Depth: <%= @rig.max_depth %></div>
+<div> Minimum Depth: <%= @rig.min_depth %></div>
+<div> Location: <%= @rig.location %></div>
+<div> classification: <%= @rig.classification %></div>
 
-<%= link_to "Edit Rig", edit_rig_path(@rig)%>
+<% if @rig.company == current_user %>
+<h4> <%= link_to "Edit Rig", edit_rig_path(@rig) %> |
+ <%= link_to "Delete Rig", rig_path(@rig), method: :delete %></h4>
+<% end %>
 
-<%= link_to "Delete RIg", rig_path(@rig), method: :delete %>
+<p> <%= link_to 'See all reviews', rig_reviews_path(@rig) %> | <%= link_to 'New reviews', new_rig_review_path(@rig) %></p>
+
+<h4>Reviews:</h4>
+<% @rig.reviews.each do |r| %>
+    <li><strong> <%= r.company.name%></strong> said: "<%= link_to r.content, rig_review_path(@rig, r)%>" </li>
+<% end %>

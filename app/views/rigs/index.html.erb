@@ -1,0 +1,5 @@
+<ul>
+    <% @rigs.each do |r|%>
+        <li><%= link_to r.name, rig_path(r)%> by <strong><%= r.company.name%></strong> </li>
+        <%end%>
+</ul>
