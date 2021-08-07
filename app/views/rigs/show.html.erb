@@ -1,17 +1,17 @@
 <h1>Rig Name: <%= @rig.name %></h1>
 <h2>By : <%= @rig.company.name %></h2>
 
-<div> Maximum Depth: <%= @rig.max_depth %></div>
-<div> Minimum Depth: <%= @rig.min_depth %></div>
-<div> Location: <%= @rig.location %></div>
-<div> classification: <%= @rig.classification %></div>
+<div> <p>Maximum Depth: <%= @rig.max_depth %> ft </p></div>
+<div> <p>Minimum Depth: <%= @rig.min_depth %> ft </p></div>
+<div> <p>Location: <%= @rig.location %></p></div>
+<div> <p>Classification: <%= @rig.classification %></p></div>
 
 <% if @rig.company == current_user %>
 <h4> <%= link_to "Edit Rig", edit_rig_path(@rig) %> |
  <%= link_to "Delete Rig", rig_path(@rig), method: :delete %></h4>
 <% end %>
 
-<p> <%= link_to 'See all reviews', rig_reviews_path(@rig) %> | <%= link_to 'New reviews', new_rig_review_path(@rig) %></p>
+<p> <%= link_to 'See all reviews', rig_reviews_path(@rig) %> | <%= link_to 'Add review', new_rig_review_path(@rig) %></p>
 
 <h4>Reviews:</h4>
 <% @rig.reviews.each do |r| %>

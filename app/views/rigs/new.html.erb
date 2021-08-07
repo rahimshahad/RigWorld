@@ -1,23 +1,23 @@
 <h1>Design Your Rig </h1>
 
 <%= form_for(@rig) do |f| %>
-    <%= f.label :name %>
+    <%= f.label :name, "Name:" %>
     <%= f.text_field :name %>
     <br>
     <br>
-    <%= f.label :min_depth %>
+    <%= f.label :min_depth, "Min Depth(ft):" %>
     <%= f.number_field :min_depth %>
     <br>
     <br>
-    <%= f.label :max_depth %>
+    <%= f.label :max_depth, "Max Depth(ft):" %>
     <%= f.number_field :max_depth %>
     <br>
     <br>
-    <%= f.label :location %>
+    <%= f.label :location, "Location:" %>
     <%= f.text_field :location%>
     <br>
     <br>
-    <%= f.label :classification %>
+    <%= f.label :classification, "Classification:" %>
     <%= f.text_field :classification%>
     <br>
     <br>

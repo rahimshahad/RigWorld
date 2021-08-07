@@ -1,5 +1,10 @@
-<ul>
-    <% @rigs.each do |r|%>
-        <li><%= link_to r.name, rig_path(r)%> by <strong><%= r.company.name%></strong> </li>
-        <%end%>
-</ul>
+<h1><%= company_rigs %></h1>
+
+
+<% if @cards.empty? %>
+
+<h2>No cards yet. Create a card <%= link_to "here", new_card_path %></h2>
+
+<% else %>
+<%= render partial: "cards", locals: {cards: @cards} %>
+<% end %>

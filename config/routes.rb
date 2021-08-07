@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :rigs
   resources :reviews
 root "sessions#home"
 #signup
@@ -18,6 +17,8 @@ resources :rigs do
   resources :reviews
 end
   # resources :categories
-  resources :companies
+  resources :companies do
+    resources :rigs
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

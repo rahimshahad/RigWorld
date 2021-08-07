@@ -1,7 +1,12 @@
 class RigsController < ApplicationController
 before_action :redirect_if_not_logged_in
     def index 
-        @rigs = Rig.all
+        if params[:company_id] && @company = Company.find_by_id(params[:company_id])
+            @rig = @company.rigs
+        else
+            @error = "Rig not found" if params[:company_id]
+            @rigs = Rig.all
+        end
     end 
 
     def new 
