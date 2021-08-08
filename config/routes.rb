@@ -18,7 +18,7 @@ resources :rigs do
 end
   # resources :categories
   resources :companies do
-    resources :rigs
+    resources :rigs, shallow: true
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

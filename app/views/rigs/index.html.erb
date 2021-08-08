@@ -1,10 +1,9 @@
-<h1><%= company_rigs %></h1>
 
 
-<% if @cards.empty? %>
+<% if @rigs.blank? %>
 
-<h2>No cards yet. Create a card <%= link_to "here", new_card_path %></h2>
+    <h2>No rigs yet. Design a rig <%= link_to "here", new_rig_path%></h2>
 
 <% else %>
-<%= render partial: "cards", locals: {cards: @cards} %>
+  <%= render partial: "rigs", locals: {rigs: @rigs} %>
 <% end %>

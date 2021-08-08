@@ -1,5 +1,7 @@
 <h1>Edit Your Rig </h1>
 
+<%= render partial: "layouts/errors", locals: {msg_error: @rig} %>
+
 <%= form_for(@rig) do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>

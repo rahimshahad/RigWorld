@@ -1,0 +1,5 @@
+<ul>
+    <% rigs.each do |r|%>
+      <li><%= link_to r.name, rig_path(r) %> - <%= r.company.name%> </li>
+    <% end %>
+</ul>

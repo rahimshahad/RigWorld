@@ -1,6 +1,7 @@
   
 <h1>Edit Review Here!</h1>
 
+<%= render partial: "layouts/errors", locals: {msg_error: @review} %>
 
 <%= form_for(@review) do |f|%>
   <%= f.label :rig %>

@@ -1,5 +1,7 @@
 <h1> SignUp Here!</h1>
 
+<%= render partial: "layouts/errors", locals: {msg_error: @company} %>
+
 <%= form_for @company, url:'/signup' do |f|%>
     <%=f.label :name, "Username:"%>
     <%=f.text_field :name%><br>
