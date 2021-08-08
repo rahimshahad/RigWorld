@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :reviews
+ 
 root "sessions#home"
 #signup
 get '/signup' => 'companies#new'
@@ -13,6 +13,8 @@ get '/login' => 'sessions#new'
 
 post '/login' => 'sessions#create'
 
+get '/auth/:provider/callback' => 'sessions#google'
+
 resources :rigs do
   resources :reviews
 end
@@ -20,5 +22,6 @@ end
   resources :companies do
     resources :rigs, shallow: true
   end
+  resources :reviews
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
