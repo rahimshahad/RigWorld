@@ -14,6 +14,9 @@ get '/login' => 'sessions#new'
 post '/login' => 'sessions#create'
 
 get '/auth/:provider/callback' => 'sessions#google'
+resources :rigs 
+
+resources :companies
 
 resources :rigs do
   resources :reviews

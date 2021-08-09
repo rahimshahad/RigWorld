@@ -27,6 +27,8 @@ gem 'dotenv-rails'
 gem 'omniauth-google-oauth2'
 
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
+
+gem 'pry'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

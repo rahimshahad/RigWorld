@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+ require 'pry'
     def destroy
         session.clear
         redirect_to root_path
@@ -20,8 +20,9 @@ class SessionsController < ApplicationController
     def google
         #find_or_create a company using the attributes auth
         @company = Company.find_or_create_by(email: auth["info"]["email"]) do |company|
+            # binding.pry
           company.name = auth["info"]["first_name"]
-          company.password = SecureRandom.hex(10)
+          company.password = SecureRandom.hex(8)
         end
         if @company.save
           session[:company_id] = @company.id
