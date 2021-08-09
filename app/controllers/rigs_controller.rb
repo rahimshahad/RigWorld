@@ -2,10 +2,10 @@ class RigsController < ApplicationController
 before_action :redirect_if_not_logged_in
     def index 
         if params[:company_id] && @company = Company.find_by_id(params[:company_id])
-            @rigs = @company.rigs.deepest
+            @rigs = @company.rigs
         else
             @error = "Company not found" if params[:company_id]
-            @rigs = Rig.deepest
+            @rigs = Rig.all
         end
     end 
 
@@ -47,6 +47,10 @@ before_action :redirect_if_not_logged_in
         @rig.destroy
         flash[:message] = "RIP #{@rig.name}!"
         redirect_to rigs_path
+    end
+
+    def deepest
+        @deepest_rig = Rig.deepest
     end
 
     private 

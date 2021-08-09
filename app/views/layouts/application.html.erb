@@ -15,7 +15,8 @@
   <% if logged_in? %>
   <%= link_to "New Rig", new_rig_path %> |
   <%= link_to "Inventory", rigs_path %> |
-  
+  <%= link_to "My Rigs", company_rigs_path(current_user) %> |
+  <%= link_to " By Depth", rigs_deepest_path%> |
   <%= link_to "Add Review", new_review_path %> |
   <%= link_to "All Reviews", reviews_path%> |
   <%= link_to "Log out", logout_path, method: :delete %>

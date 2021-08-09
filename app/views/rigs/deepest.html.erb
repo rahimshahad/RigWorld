@@ -1,0 +1,5 @@
+<ul>
+    <% @deepest_rig.each do |d| %>
+    <li><p><%= link_to d.name, rig_path(d) %> - <%= d.max_depth %> ft</p> </li>
+    <% end %>
+</ul>
