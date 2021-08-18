@@ -59,3 +59,5 @@ before_action :redirect_if_not_logged_in
         params.require(:rig).permit(:name, :type, :max_depth, :min_depth, :location, :classification)
         end
 end
+
+
