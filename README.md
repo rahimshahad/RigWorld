@@ -28,5 +28,5 @@ Bug reports and pull requests are welcome on Github at https://github.com/rahims
 This app is available as open source under the terms of the [MIT LICENSE](https://opensource.org/licenses/MIT).
 
 # Code of Conduct
-Everyone interacting in the Travelize on Rails project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
+Everyone interacting in the RIGWORLD codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
 
