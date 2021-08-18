@@ -21,4 +21,12 @@ Navigate to localhost:3000 in your web browser to launch the application
 
 Use CTRL+C in your terminal to shutdown rails server and exit the app
 
+# Contributing
+Bug reports and pull requests are welcome on Github at https://github.com/rahimshahad/RigWorld. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor_Convenant]https://www.contributor-covenant.org/ code of conduct.
+
+# License
+This app is available as open source under the terms of the [MIT_LICENSE]https://opensource.org/licenses/MIT.
+
+# Code of Conduct
+Everyone interacting in the Travelize on Rails project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
 
